@@ -5,6 +5,18 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "calc_pack_sdiaz"
 version = "0.4.0"
+dependencies = [
+	"tqdm~=4.0" #alt can do "tqdm>="4.67.1"
+]
 
 [project.scripts]
 calc_pack_sdiaz = "calc_pack_sdiaz.__main__:main"
+
+[project.optional-dependencies]
+test = [
+	"pytest",
+	"mypy",
+	"ruff",
+	"pre-commit",
+	"tox",
+]
